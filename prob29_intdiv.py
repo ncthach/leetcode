@@ -4,7 +4,7 @@ class Solution:
         for i in range(30):
             ret += ret
         return ret
-    
+
     def clamp(self, val: int) -> int:
         lower = -self.two_to_thirty_one()
         upper = self.two_to_thirty_one() - 1
@@ -20,7 +20,7 @@ class Solution:
             dividend = -dividend
         if divisor < 0:
             divisor = -divisor
-            
+
         powers = []
         quot_powers = []
         val = divisor
@@ -36,10 +36,10 @@ class Solution:
             if powers[i] <= remainder:
                 quotent += quot_powers[i]
                 remainder = remainder - powers[i]
-        
+
         if neg:
             quotent = -quotent
-        
+
         return self.clamp(quotent)
 
 lower = -2 ** 31
